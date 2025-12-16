@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>NEXUS WAVE GLOBAL - Empowering Global Connectivity</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="assets/img/nwglogo.white.png" rel="icon">
+
+    <!-- CSS & AOS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#013a5f">
+</head>
+
+<body>
+
+<div class="loader"></div>
+
+    <!-- Main Navbar - Always Visible -->
+    <header class="navbar">
+        <div class="container bottom-nav">
+            <a href="#" class="logo">
+                <img src="assets/img/nwglogo.png" alt="NEXUS WAVE GLOBAL" class="logo-img">
+                <span>NEXUS WAVE GLOBAL</span>
+            </a>
+
+            <button class="hamburger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#events-section">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section with Fixed Video Background -->
+    <section id="hero" class="hero-section">
+        <!-- Fixed Video Background -->
+        <div class="hero-video-container">
+            <!-- Desktop Video -->
+            <video class="hero-video hero-video-desktop" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+                <source src="assets/video/hero-desktop.mp4" type="video/mp4">
+                <source src="assets/video/hero-desktop.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Mobile Video -->
+            <video class="hero-video hero-video-mobile" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster-mobile.jpg">
+                <source src="assets/video/hero-mobile.mp4" type="video/mp4">
+                <source src="assets/video/hero-mobile.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Hero Content - Left Aligned -->
+        <div class="hero-content">
+            <h1>Empowering Global Connectivity Through Innovation</h1>
+            <p>We provide cutting-edge services and expert solutions to drive your business forward in today's digital landscape.</p>
+            
+            <div class="hero-buttons">
+                <a href="#services" class="btn-hero primary">
+                    <i class="fas fa-rocket"></i>
+                    Explore Our Solutions
+                </a>
+                <a href="#contact" class="btn-hero secondary">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>
+                        At Nexus Wave Global, we are dedicated to empowering professionals, businesses, and students through high-impact training programs and business development services. Our goal is to foster growth, enhance productivity, and unlock new opportunities through expert-led programs and strategic support.
+                    </p>
+                    <p>
+                        We specialize in professional training, skill development, and operational efficiency, helping individuals and teams build the competencies needed to succeed in today's fast-paced world.
+                    </p>
+                    <button class="btn-readmore" id="openModalBtn">
+                        Continue Reading <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="about-image">
+                    <img src="assets/img/team-photo.jpg" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="assets/img/icons/tds.png" alt="Training & Development" class="icon">
+                    <h3>TRAINING & DEVELOPMENT SERVICES</h3>
+                    <p>We believe that learning should be engaging, accessible, and tailored to individual needs. Our interactive online programs provide high-quality training and development from the comfort of your home, empowering learners of all ages with essential skills for the future.</p>
+                    <a href='training.html' class="service-btn">
+                        Explore Courses <i class="fas fa-graduation-cap"></i>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <img src="assets/img/icons/va.png" alt="Virtual Assistance" class="icon">
+                    <h3>USER VERIFICATION & SUPPORT OPERATIONS</h3>
+                    <p>Verification-Powered Support at Scale! Our team of verification specialists and custom-built system streamline identity checks and user reviews—handling thousands of requests with precision. Paired with responsive customer support, we help businesses stay secure, efficient, and scalable.</p>
+                    <a href='support-portal.html' class="service-btn">
+                        Partner With Us <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events-section" class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-container">
+                <!-- Video -->
+                <div class="events-video-wrapper">
+                    <iframe 
+                        class="events-video"
+                        src="https://d1yei2z3i6k35z.cloudfront.net/11028959/68394e44af551_FunnelVideo.mp4" 
+                        title="Event Video" 
+                        frameborder="0" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <!-- Description & Button -->
+                <div class="events-content">
+                    <h2 class="events-title">Join Our Upcoming Event</h2>
+                    <p class="events-description">
+                        Discover key insights, practical skills, and innovative strategies at our upcoming event. Don't miss this opportunity to grow and connect with industry leaders!
+                    </p>
+                    <a href="register.html" class="events-button">
+                        Register Now <i class="fas fa-calendar-check"></i>
+                    </a>
+                    <a href="https://nexuswaveglobal.systeme.io/register" class="events-button">
+                        More Details <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <h2>Ready to Elevate Your Business or Learning Journey?</h2>
+            <p>Let Nexus Wave Global be your partner in progress. Get in touch to explore how we can work together to achieve your goals.</p>
+            <a href="#contact" class="btn-hero">
+                Get Started <i class="fas fa-rocket"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <img src="assets/img/icons/address.png" alt="Address" class="icon">
+                    <h4>Visit Us</h4>
+                    <p>Manila, Philippines</p>
+                </div>
+                <div class="contact-box">
+                    <img src="assets/img/icons/call.png" alt="Call Us" class="icon">
+                    <h4>Call Us</h4>
+                    <p>+63-9306156772<br>Mon - Fri, 9AM - 6PM</p>
+                </div>
+                <div class="contact-box">
+                    <img src="assets/img/icons/emailus.png" alt="Email Us" class="icon">
+                    <h4>Email Us</h4>
+                    <p>we.nexuswaveglobal@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <!-- Contact Details with Logo -->
+            <div class="footer-box">
+                <img src="assets/img/nwglogo.png" alt="Nexus Wave Global Logo" class="footer-logo">
+                <p>Empowering global connectivity through innovative solutions and expert services.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#events-section">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-box">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="training.html">Training & Development</a></li>
+                    <li><a href="support-portal.html">Verification & Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-box">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Manila, Philippines</li>
+                    <li><i class="fas fa-phone"></i> +63-9306156772</li>
+                    <li><i class="fas fa-envelope"></i> we.nexuswaveglobal@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nexus Wave Global. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <h3>More About Us</h3>
+            <p>
+                In addition to our corporate training initiatives, we also cater to schools and students by offering practical life skills training that prepares young learners for the future. Our programs focus on time management, financial literacy, problem-solving, communication skills, and digital proficiency, equipping students with essential skills for real-world success.
+            </p>
+            <blockquote>
+                "We welcome partnerships with schools that aim to enhance their students' personal and professional development."
+            </blockquote>
+            <p>
+                We also provide training for young children, focusing on practical life skills such as cooking, sewing, and household chores. These programs are designed to instill independence, responsibility, and essential daily living skills from an early age, ensuring children grow into capable and self-sufficient individuals.
+            </p>
+            <p>
+                We also offer comprehensive business support services such as customer service, data entry, virtual assistance, sales strategy, marketing, and recruitment—helping businesses scale efficiently with tailored solutions.
+            </p>
+            <p>
+                By partnering with us, you gain access to innovative training solutions, expert mentorship, and strategic partnerships that foster long-term success. Whether you're an entrepreneur, a corporate team, a professional looking to upskill, or a school preparing students for the future, we're here to help you work smarter, grow faster, and achieve more.
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    
+</body>
+</html>
