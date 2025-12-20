@@ -48,26 +48,27 @@
         </div>
     </header>
 
-    <!-- Hero Section with Fixed Video Background -->
-    <section id="hero" class="hero-section">
-        <!-- Fixed Video Background -->
-        <div class="hero-video-container">
-            <!-- Desktop Video -->
-            <video class="hero-video hero-video-desktop" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
-                <source src="assets/video/hero-desktop.mp4" type="video/mp4">
-                <source src="assets/video/hero-desktop.webm" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
-            
-            <!-- Mobile Video -->
-            <video class="hero-video hero-video-mobile" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
-                <source src="assets/video/hero-mobile.mp4" type="video/mp4">
-                <source src="assets/video/hero-mobile.webm" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+<!-- Hero Section with Fixed Video Background -->
+<section id="hero" class="hero-section">
+    <!-- Fixed Video Background -->
+    <div class="hero-video-container">
+        <!-- Desktop Video -->
+        <video class="hero-video hero-video-desktop" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+            <source src="assets/video/hero-desktop.mp4" type="video/mp4">
+            <source src="assets/video/hero-desktop.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Mobile Video -->
+        <video class="hero-video hero-video-mobile" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+            <source src="assets/video/hero-mobile.mp4" type="video/mp4">
+            <source src="assets/video/hero-mobile.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-        <!-- Hero Content - Left Aligned -->
+    <!-- Hero Content - Left Aligned -->
+    <div class="container">
         <div class="hero-content">
             <h1>Empowering Global Connectivity Through Innovation</h1>
             <p>We provide cutting-edge services and expert solutions to drive your business forward in today's digital landscape.</p>
@@ -83,7 +84,8 @@
                 </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -108,37 +110,132 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-container">
-                <div class="service-item">
-                    <img src="assets/img/icons/tds.png" alt="Training & Development" class="icon">
-                    <h3>TRAINING & DEVELOPMENT SERVICES</h3>
-                    <p>We believe that learning should be engaging, accessible, and tailored to individual needs. Our interactive online programs provide high-quality training and development from the comfort of your home, empowering learners of all ages with essential skills for the future.</p>
-                    <a href='training.html' class="service-btn">
-                        Explore Courses <i class="fas fa-graduation-cap"></i>
-                    </a>
+<!-- Services Section -->
+<section id="services" class="section">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <div class="service-icon-wrapper">
+                    <img src="assets/img/icons/tds.png" alt="Training & Development" class="service-icon">
                 </div>
-                <div class="service-item">
-                    <img src="assets/img/icons/va.png" alt="Virtual Assistance" class="icon">
-                    <h3>USER VERIFICATION & SUPPORT OPERATIONS</h3>
-                    <p>Verification-Powered Support at Scale! Our team of verification specialists and custom-built system streamline identity checks and user reviews—handling thousands of requests with precision. Paired with responsive customer support, we help businesses stay secure, efficient, and scalable.</p>
-                    <a href='support-portal.html' class="service-btn">
-                        Partner With Us <i class="fas fa-handshake"></i>
-                    </a>
+                <h3>TRAINING & DEVELOPMENT SERVICES</h3>
+                <p>We believe that learning should be engaging, accessible, and tailored to individual needs. Our interactive online programs provide high-quality training and development from the comfort of your home, empowering learners of all ages with essential skills for the future.</p>
+                <a href='training.html' class="service-btn">
+                    Explore Courses <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+            <div class="service-item">
+                <div class="service-icon-wrapper">
+                    <img src="assets/img/icons/va.png" alt="Virtual Assistance" class="service-icon">
                 </div>
+                <h3>USER VERIFICATION & SUPPORT OPERATIONS</h3>
+                <p>Verification-Powered Support at Scale! Our team of verification specialists and custom-built system streamline identity checks and user reviews—handling thousands of requests with precision. Paired with responsive customer support, we help businesses stay secure, efficient, and scalable.</p>
+                <a href='support-portal.html' class="service-btn">
+                    Partner With Us <i class="fas fa-handshake"></i>
+                </a>
             </div>
         </div>
+    </div>
+</section>
+
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2 class="about-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Hear from businesses that have worked with us</p>
+        
+        <div class="testimonials-container">
+          <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide active">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">"</div>
+                  <p class="testimonial-text">"I have had the pleasure of working with Karren, Mark and their team for nearly three years. In this time I found them to be committed, accurate and highly reliable. They helped us grow a customer support team from a very small initial operation to a team that now spans three continents. We will miss their cheery dispositions and 'can do' attitudes greatly, so it is without hesitation that I'd recommend the team and their services."</p>
+                </div>
+                <div class="client-info">
+                  <img src="assets/img/va/testimonial-1.jpg" alt="Richard Edmonds" class="client-photo">
+                  <div class="client-details">
+                    <p class="client-name">Richard Edmonds</p>
+                    <p class="client-company">Repeat Technologies - Sony PlayStation®</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">"</div>
+                  <p class="testimonial-text">"This team is an exceptional professional. Extremely helpful. Professional and a great communicator. I would definitely hire them again (and since this is the second contract I had with them, I already did hire them twice). Highly recommend this team and their services."</p>
+                </div>
+                <div class="client-info">
+                  <img src="assets/img/va/testimonial-2.jpg" alt="Anton Kimfors" class="client-photo">
+                  <div class="client-details">
+                    <p class="client-name">Anton Kimfors</p>
+                    <p class="client-company">Customer Support for a Consulting Business - SellWave</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">"</div>
+                  <p class="testimonial-text">"This team is exceptional! Smart, witty, and genuinely fun to work with - they bring a personal touch to everything they do. Communication was always clear and transparent, task were handled with great attention to detail, and we were consistently impressed by their creative problem-solving and proactive improvements to our systems. A truly professional and reliable team we at Rubicoux LLC would be happy to work with again!"</p>
+                </div>
+                <div class="client-info">
+                  <img src="assets/img/va/testimonial-3.png" alt="Rubicoux L.L.C" class="client-photo">
+                  <div class="client-details">
+                    <p class="client-name">Jordan</p>
+                    <p class="client-company">Promotional Campaigns and Customer Service - Rubicoux L.L.C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="quote-icon">"</div>
+                  <p class="testimonial-text">"Working with this team was a seamless experience. They handled billing processes with precision and provided outstanding customer service that reflected professionalisman and empathy. Quick to adapt and always proactive, they contributed valuable insights that improved our internal systems. A dependable and skilled team I would gladly recommend."</p>
+                </div>
+                <div class="client-info">
+                  <img src="assets/img/va/testimonial-4.png" alt="Mebb Sign Language" class="client-photo">
+                  <div class="client-details">
+                    <p class="client-name">Christopher Breen</p>
+                    <p class="client-company">Owner - Mebb Sign Language</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="slider-controls">
+            <button class="slider-prev">❮</button>
+            <div class="slider-dots"></div>
+            <button class="slider-next">❯</button>
+          </div>
+        </div>
+      </div>
     </section>
 
+
+
+
+
     <!-- Events Section -->
-    <section id="events-section" class="events-section">
+   <!-- <section id="events-section" class="events-section">
         <div class="container">
             <h2 class="section-title">Upcoming Events</h2>
             <div class="events-container">
-                <!-- Video -->
+                <!-- Video 
                 <div class="events-video-wrapper">
                     <iframe 
                         class="events-video"
@@ -150,7 +247,7 @@
                     </iframe>
                 </div>
                 
-                <!-- Description & Button -->
+                <!-- Description & Button 
                 <div class="events-content">
                     <h2 class="events-title">Join Our Upcoming Event</h2>
                     <p class="events-description">
@@ -165,7 +262,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Call to Action Section -->
     <section class="cta-section">
@@ -202,58 +299,74 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-container">
-            <!-- Contact Details with Logo -->
-            <div class="footer-box">
-                <img src="assets/img/nwglogo.png" alt="Nexus Wave Global Logo" class="footer-logo">
-                <p>Empowering global connectivity through innovative solutions and expert services.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-box">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#events-section">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Services -->
-            <div class="footer-box">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="training.html">Training & Development</a></li>
-                    <li><a href="support-portal.html">Verification & Support</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="footer-box">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Manila, Philippines</li>
-                    <li><i class="fas fa-phone"></i> +63-9306156772</li>
-                    <li><i class="fas fa-envelope"></i> we.nexuswaveglobal@gmail.com</li>
-                </ul>
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <!-- Social Media -->
+        <div class="footer-box">
+            <h4>Social Media</h4>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" aria-label="X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                    <span>X (Twitter)</span>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
             </div>
         </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>&copy; 2025 Nexus Wave Global. All rights reserved.</p>
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">Who We Help</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#services">What We Offer</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </footer>
+
+        <!-- Services -->
+        <div class="footer-box">
+            <h4>Our Services</h4>
+            <ul>
+                <li><a href="training.html">Training & Development</a></li>
+                <li><a href="support-portal.html">Verification & Support</a></li>
+            </ul>
+        </div>
+
+     <!-- Contact Info -->
+<div class="footer-box">
+    <h4>Contact Info</h4>
+    <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Manila, Philippines</li>
+        <li><i class="fas fa-phone"></i> +63-9306156772</li>
+        <li class="email-item">
+            <i class="fas fa-envelope"></i>
+            <span class="email-text">we.nexuswaveglobal@gmail.com</span>
+        </li>
+        <li><i class="fas fa-clock"></i> Mon - Fri, 9AM - 6PM</li>
+    </ul>
+</div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Nexus Wave Global. All rights reserved.</p>
+    </div>
+</footer>
 
     <!-- Modal -->
     <div id="aboutModal" class="modal">
