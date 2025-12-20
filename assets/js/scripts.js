@@ -280,3 +280,176 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initAnimations();
 });
+
+
+// Support Portal Specific Functions
+function initSupportPortalFeatures() {
+    // Testimonial Slider
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    if (testimonialSlider) {
+        initTestimonialSlider();
+    }
+    
+    // Horizontal Scrolling
+    const scrollContainers = document.querySelectorAll('.va-scroll-container');
+    if (scrollContainers.length > 0) {
+        window.scrollHorizontally = function(containerId, direction) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const item = container.querySelector('.va-service-item');
+            if (!item) return;
+
+            const scrollAmount = item.offsetWidth + 32; // 32px is the gap (2rem)
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+            if (direction === 'left') {
+                if (container.scrollLeft <= 0) {
+                    container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                }
+            } else {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }
+        };
+    }
+    
+    // Email Window Function
+    window.openEmailWindow = function() {
+        const email = 'partner@nexuswaveglobal.com';
+        const subject = 'INQUIRY - User Verification & Support Operations';
+        const body = 'Hello Nexus Wave Global Team,\n\nI am interested in learning more about your verification and support services. Please contact me with more information.\n\nBest regards,';
+        
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(mailtoLink, '_blank', 'width=600,height=600,top=250,left=650');
+        return false;
+    };
+}
+
+// Testimonial Slider Initialization
+function initTestimonialSlider() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    
+    if (!slides.length || !dotsContainer) return;
+    
+    let currentIndex = 0;
+    let autoSlideInterval;
+    
+    // Create dots
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.className = 'slider-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        // Update current index
+        currentIndex = (index + slides.length) % slides.length;
+        
+        // Update slides
+        slides.forEach((slide, i) => {
+            if (i === currentIndex) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+        
+        // Update dots
+        document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+            if (i === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+        
+        resetAutoSlide();
+    }
+    
+    // Auto slide functionality
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 5000);
+    }
+    
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+    // Initialize
+    createDots();
+    startAutoSlide();
+    
+    // Event listeners
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    }
+    
+    // Pause on hover
+    const slider = document.querySelector('.testimonials-container');
+    if (slider) {
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+    }
+}
+
+// Update DOMContentLoaded to include support portal features
+document.addEventListener("DOMContentLoaded", function () {
+    // ... (keep all existing code from lines 2-284) ...
+    
+    // Initialize support portal features if on support portal page
+    initSupportPortalFeatures();
+    
+    // Set active nav link for current page
+    setCurrentPageActiveNav();
+});
+
+// Function to set active nav link based on current page
+function setCurrentPageActiveNav() {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('#nav-links a');
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        // Remove active class from all links
+        link.classList.remove('active');
+        
+        // Check if current page matches link
+        if (currentPage.includes('support-portal') && (linkHref === 'support-portal.html' || linkHref === 'support-portal.php')) {
+            link.classList.add('active');
+        } else if (currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/')) {
+            if (linkHref === '#hero' || linkHref === 'index.html') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('training.html') && linkHref === 'training.html') {
+            link.classList.add('active');
+        }
+    });
+}
